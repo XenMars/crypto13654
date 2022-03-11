@@ -1,0 +1,12 @@
+@import "settings/vars";
+@import "settings/colors";
+@import "settings/mixins";
+// @import "../../node_modules/swiper/swiper.scss";
+@import "default/reset";
+@import "global/fonts";
+@import "global/animation";
+@import "global/tags";
+@import "global/classes";
+@import "structure-page/header";
+@import "structure-page/footer";
+@import "./pages/main";

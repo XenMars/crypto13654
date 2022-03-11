@@ -1,0 +1,38 @@
+.head-line {
+  margin-bottom: -16px;
+  @include media("md") {
+    margin-bottom: 0;
+    display: block;
+  }
+  &__title {
+    margin-bottom: 16px;
+    margin-right: 20px;
+    position: relative;
+    top: 10px;
+    @include media("md") {
+      top: 0;
+    }
+  }
+  &__link {
+    margin-bottom: 16px;
+    @include var("color", "brand-1", $brand-1);
+    @include media("md") {
+      margin-bottom: 0;
+    }
+    &:hover {
+      .head-line__link-icon path {
+        @include var("fill", "brand-2", $brand-2);
+      }
+      .head-line__link-text {
+        @include var("color", "brand-2", $brand-2);
+      }
+    }
+    &-icon {
+      @include const-size(24px, true);
+      margin-right: 9px;
+    }
+    &-text {
+      transition: 0.3s;
+    }
+  }
+}

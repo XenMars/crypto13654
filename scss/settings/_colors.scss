@@ -1,0 +1,25 @@
+// default theme
+$dflt-txt-clr: #FFFFFF;
+$dflt-bg: linear-gradient(180deg, #6C67A0 0%, #4B477D 100%);
+;
+// system
+$system-1: #d6d6d6;
+$system-2: #ededed;
+$system-3: rgba(255, 255, 255, 0.64);
+$system-4: rgba(255, 255, 255, 0.4);
+$system-5: rgba(255, 255, 255, 0.16);
+// test
+$text-1: #929292;
+$text-2: #ffffff;
+// brand
+:root {
+    --dflt-txt-clr: #FFFFFF;
+    --dflt-bg: linear-gradient(180deg, #6C67A0 0%, #4B477D 100%);
+    --system-1: #d6d6d6;
+    --system-2: #ededed;
+    --system-3: hsla(0, 0%, 100%, 0.64);
+    --system-4: hsla(0, 0%, 100%, 0.4);
+    --system-5: hsla(0, 0%, 100%, 0.16);
+    --text-1: #929292;
+    --text-2: #fff;
+}

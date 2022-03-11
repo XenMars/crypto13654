@@ -1,0 +1,119 @@
+.dflt-ln {
+  max-width: 100%;
+  width: 100%;
+  &__inner {
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    padding: 16px 0 4px;
+  }
+  &.input {
+    .dflt-ln__input {
+      height: 24px;
+    }
+    .dflt-ln__label {
+      bottom: 50%;
+      transform: translateY(50%);
+    }
+  }
+  &.textarea {
+    .dflt-ln__input {
+      height: 96px;
+    }
+    .dflt-ln__label {
+      bottom: 100%;
+      transform: translateY(150%);
+    }
+  }
+  &.white {
+    .dflt-ln__inner {
+      @include border(1px, solid, "text-2", $text-2, "bottom");
+    }
+    .dflt-ln__label {
+      color: rgba(255, 255, 255, 0.64);
+    }
+    .dflt-ln__textarea,
+    .dflt-ln__input {
+      @include var("color", "text-2", $text-2);
+    }
+    .dflt-ln__error {
+      @include var("color", "text-2", $text-2);
+    }
+  }
+  &.dark {
+    .dflt-ln__inner {
+      @include border(1px, solid, "dflt-txt-clr", $dflt-txt-clr, "bottom");
+    }
+    .dflt-ln__label {
+      @include var("color", "text-1", $text-1);
+    }
+    .dflt-ln__textarea,
+    .dflt-ln__input {
+      @include var("color", "dflt-txt-clr", $dflt-txt-clr);
+    }
+    .dflt-ln__error {
+      @include var("color", "brand-1", $brand-1);
+    }
+  }
+  &__input {
+    font-family: Gotham Pro;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    width: 100%;
+    max-width: 100%;
+    background: transparent;
+    resize: none;
+  }
+  &__input {
+    height: 24px;
+  }
+  &__textarea {
+    height: 96px;
+  }
+  &__label {
+    position: absolute;
+    font-size: 16px;
+    line-height: 150%;
+    pointer-events: none;
+    transition: 0.2s;
+  }
+  &__error {
+    font-size: 13px;
+    line-height: 120%;
+    margin-top: 4px;
+    display: none;
+  }
+  &.active {
+    &.input {
+      .dflt-ln__label {
+        bottom: 100%;
+        transform: translateY(100%);
+      }
+    }
+    .dflt-ln__label {
+      font-size: 13px;
+      line-height: 120%;
+    }
+    &.dark {
+      @include var("border-color", "brand-1", $brand-1);
+    }
+    &.textarea {
+      .dflt-ln__label {
+        bottom: 100%;
+        transform: translateY(100%);
+      }
+    }
+  }
+  &.error {
+    .dflt-ln__error {
+      display: block;
+    }
+    &.dark {
+      .dflt-ln__inner {
+        @include var("border-color", "brand-1", $brand-1);
+      }
+    }
+  }
+}

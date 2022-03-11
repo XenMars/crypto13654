@@ -1,0 +1,35 @@
+// ==> text
+$dflt-fnt-fml: 'Montserrat',
+'Arial',
+'Helvetica',
+sans-serif;
+$second-fnt-fml: 'Roboto',
+'Arial',
+'Helvetica',
+sans-serif;
+$dflt-txt-wght: 400;
+$dflt-txt-sz: 24px;
+$dflt-txt-sz-tb: null;
+$dflt-txt-sz-mb: null;
+$dflt-txt-hght: 1.1;
+$dflt-txt-hght-tb: null;
+$dflt-txt-hght-mb: null;
+$dflt-txt-mt: 24px;
+$dflt-txt-mt-mb: 20px;
+// ==> content container
+$container: null;
+$container-pd-dsktp: 115px;
+$container-pddng-lp: 48px;
+$container-pddng-tb: 32px;
+$container-pddng-mb: 16px;
+// ==> media map
+$media-laptop: 1640px;
+$media-min-laptop: #{1400px + ($container-pddng-lp * 2) - 20};
+$media-tab: 1100px;
+$media-min-tab: 900px;
+$media-middle: 700px;
+$media-mobile: 500px;
+$media-little: 360px;
+// ==> other
+$dflt-hvr-nm: "brand-1";
+$dflt-hvr-clr: #8AD4EC;

@@ -1,0 +1,36 @@
+.mrgn-brd {
+  margin: 40px 0 32px;
+  @media (max-width: 500px) {
+    margin-right: 36px 0 28px;
+  }
+}
+.breadcrumbs {
+  a.breadcrumbs__element {
+    @include var("color", "text-1", $text-1);
+    &:hover {
+      @include var("color", "brand-1", $brand-1);
+    }
+  }
+  .breadcrumbs__element:not(a) {
+    @include var("color", "brand-1", $brand-1);
+  }
+  &__element {
+    &:not(:last-child) {
+      @include md-ad(8, 4, "margin-right");
+    }
+  }
+  &__icon {
+    @include const-size(22px, true);
+    @include md-ad(8, 4, "margin-right");
+    position: relative;
+    top: 1px;
+    @include media("tb") {
+      top: -1px;
+      @include const-size(20px, true);
+    }
+    @include media("mb") {
+      @include const-size(18px, true);
+      top: -2px;
+    }
+  }
+}

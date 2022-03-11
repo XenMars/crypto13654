@@ -1,0 +1,47 @@
+html {
+    height: auto;
+    min-height: auto;
+}
+
+body {
+    height: auto;
+    min-height: 100%;
+    background: linear-gradient(180deg, #6C67A0 0%, #4B477D 100%);
+}
+
+img {
+    max-width: 100%;
+}
+
+body,
+p,
+a,
+label,
+button {
+    @include var("color", "dflt-txt-clr", $dflt-txt-clr);
+    font-family: $dflt-fnt-fml;
+    font-weight: $dflt-txt-wght;
+    font-size: $dflt-txt-sz;
+    line-height: $dflt-txt-hght;
+}
+
+a,
+button,
+label,
+svg,
+path {
+    // transition: 0.6s cubic-bezier(0.55, 0, 0.1, 1);
+    transition: 0.3s;
+}
+
+img {
+    object-fit: cover;
+}
+
+@if $dflt-hvr-nm !=null {
+    a {
+        &:hover {
+            @include var("color", $dflt-hvr-nm, $dflt-hvr-clr);
+        }
+    }
+}

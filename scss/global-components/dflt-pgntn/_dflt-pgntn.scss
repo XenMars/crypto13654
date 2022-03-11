@@ -1,0 +1,17 @@
+.dflt-pgntn {
+  &__element {
+    @include const-size(44px, true);
+    &.active {
+      pointer-events: none;
+      @include var("background", "brand-1", $brand-1);
+      @include var("color", "text-2", $text-2);
+    }
+    &:hover {
+      @include var("color", "text-2", $text-2);
+      @include var("background", "brand-1", $brand-1);
+      .dflt-pgntn__element-icon path {
+        @include var("stroke", "text-2", $text-2);
+      }
+    }
+  }
+}
